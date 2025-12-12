@@ -476,9 +476,9 @@ class ListaEnlazada {
 ## 📄 Licencia y Autoría
 
 **Proyecto Educativo**: Estructura de Datos I  
-**Desarrollador**: Usando GitHub Copilot  
+**Desarrollador**: John Harold Belalcazar Lozano. Usando GitHub Copilot  
 **Entorno**: Visual Studio Code  
-**Fecha**: Diciembre 2024  
+**Fecha**: Diciembre 2025  
 **Versión**: 1.0.0  
 
 ---

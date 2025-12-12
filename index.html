@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas - Estructura de Lista Enlazada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Gestor de Tareas</h1>
+            <p class="subtitle">Implementado con Lista Enlazada en JavaScript</p>
+            <p class="subtitle">Estructura de Datos I - Universidad Incca - John Harold Belalcazar Lozano</p>
+            <p class="subtitle">Docente Josthin Duvan Sarmiento Samper.</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Sección de entrada -->
+            <section class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Escribe una nueva tarea..." 
+                        class="task-input"
+                    >
+                    <select id="prioritySelect" class="priority-select">
+                        <option value="baja">Baja</option>
+                        <option value="media" selected>Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                    <button id="addBtn" class="btn btn-add">+ Agregar</button>
+                </div>
+            </section>
+
+            <!-- Estadísticas -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Total</h3>
+                    <p id="totalTasks" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completadas</h3>
+                    <p id="completedTasks" class="stat-number">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pendientes</h3>
+                    <p id="pendingTasks" class="stat-number">0</p>
+                </div>
+            </section>
+
+            <!-- Filtros -->
+            <section class="filter-section">
+                <button class="filter-btn active" data-filter="todas">Todas</button>
+                <button class="filter-btn" data-filter="pendientes">Pendientes</button>
+                <button class="filter-btn" data-filter="completadas">Completadas</button>
+            </section>
+
+            <!-- Lista de tareas -->
+            <section class="tasks-section">
+                <h2>Tareas</h2>
+                <ul id="taskList" class="task-list">
+                    <!-- Las tareas se insertarán aquí dinámicamente -->
+                </ul>
+                <div id="emptyState" class="empty-state">
+                    <p>📭 No hay tareas. ¡Crea una nueva!</p>
+                </div>
+            </section>
+
+            <!-- Controles generales -->
+            <section class="controls-section">
+                <button id="clearBtn" class="btn btn-clear">🗑️ Limpiar Completadas</button>
+                <button id="exportBtn" class="btn btn-export">📥 Exportar Datos</button>
+                <button id="importBtn" class="btn btn-import">📤 Importar Datos</button>
+                <input 
+                    type="file" 
+                    id="importFile" 
+                    accept=".json" 
+                    style="display: none;"
+                >
+            </section>
+        </div>
+
+        <!-- Información sobre la estructura de datos -->
+        <footer>
+            <details class="info-panel">
+                <summary>ℹ️ Información Técnica</summary>
+                <div class="info-content">
+                    <h3>Estructura de Datos: Lista Enlazada</h3>
+                    <p>Esta aplicación utiliza una <strong>lista enlazada</strong> como estructura de datos principal para almacenar las tareas. Cada nodo contiene:</p>
+                    <ul>
+                        <li><strong>id:</strong> Identificador único de la tarea</li>
+                        <li><strong>texto:</strong> Descripción de la tarea</li>
+                        <li><strong>completada:</strong> Estado booleano</li>
+                        <li><strong>prioridad:</strong> Nivel de importancia (baja, media, alta)</li>
+                        <li><strong>siguiente:</strong> Referencia al siguiente nodo</li>
+                    </ul>
+                    <p><em>Los datos se guardan en memoria del navegador durante la sesión actual.</em></p>
+                </div>
+            </details>
+        </footer>
+    </div>
+
+    <script src="linkedList.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
